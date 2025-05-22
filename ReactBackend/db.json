@@ -1414,11 +1414,12 @@
   "courses": [],
   "projects":[
     {
-      "projectName":"User-TAF-Regression",
-      "projectId": "d416a27e-4e46-4e4e-9dce-1f3613df3191",
+      "name":"User-TAF-Regression",
+      "id": "d416a27e-4e46-4e4e-9dce-1f3613df3191",
       "lastBuildInfo":{
         "buildDate":"15-May-2025",
         "triggeredAt":"2025-05-15T10:34:12.123Z",
+        "totalDuration": "54",
         "results":{
           "passed": "40",
           "failed": "2",
@@ -1428,11 +1429,12 @@
       }
     },
     {
-      "projectName":"Photos-TAF-Regression",
-      "projectId": "6da41a78-3269-4c46-bc81-380d12ee4d5a",
+      "name":"Photos-TAF-Regression",
+      "id": "6da41a78-3269-4c46-bc81-380d12ee4d5a",
       "lastBuildInfo":{
         "buildDate":"14-May-2025",
         "triggeredAt":"2025-05-14T11:34:12.123Z",
+        "totalDuration": "12",
         "results":{
           "passed": "23",
           "failed": "5",
@@ -1442,11 +1444,72 @@
       }
     },
     {
-      "projectName":"Nautilus-TAF-Regression",
-      "projectId": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
+      "name":"Nautilus-TAF-Regression",
+      "id": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
       "lastBuildInfo":{
         "buildDate":"16-May-2025",
         "triggeredAt":"2025-05-16T2:22:12.123Z",
+        "totalDuration": "37",
+        "results":{
+          "passed": "75",
+          "failed": "2",
+          "skipped": "5",
+          "total": "82"
+        }
+      }
+    },
+    {
+      "name":"User-TAF-Regression",
+      "id": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
+      "lastBuildInfo":{
+        "buildDate":"16-May-2025",
+        "triggeredAt":"2025-05-16T2:22:12.123Z",
+        "totalDuration": "37",
+        "results":{
+          "passed": "75",
+          "failed": "2",
+          "skipped": "5",
+          "total": "82"
+        }
+      }
+    },
+    {
+      "name":"Galleon-TAF-Regression",
+      "id": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
+      "lastBuildInfo":{
+        "buildDate":"16-May-2025",
+        "triggeredAt":"2025-05-16T2:22:12.123Z",
+        "totalDuration": "37",
+        "results":{
+          "passed": "75",
+          "failed": "2",
+          "skipped": "5",
+          "total": "82"
+        }
+      }
+    },
+    {
+      "name":"Services-TAF-Regression",
+      "id": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
+      "lastBuildInfo":{
+        "buildDate":"16-May-2025",
+        "triggeredAt":"2025-05-16T2:22:12.123Z",
+        "totalDuration": "37",
+        "results":{
+          "passed": "75",
+          "failed": "2",
+          "skipped": "5",
+          "total": "82"
+        }
+      }
+    },
+    {
+      "name":"URT-TAF-Regression",
+      "id": "ec8fe2a8-39c9-4bb5-ba15-c04bbff0f017",
+      "lastBuildInfo":{
+        "buildDate":"16-May-2025",
+        "triggeredAt":"2025-05-16T2:22:12.123Z",
+        "totalDuration": "37",
         "results":{
           "passed": "75",
           "failed": "2",
