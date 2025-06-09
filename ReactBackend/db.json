@@ -1739,84 +1739,665 @@
       "id": "afdd3733-e947-4d4c-8cd0-0933af5167ee"
     }
   ],
-  "test-sutie-5d2f0a3a-b1d0-4896-97eb-e2ffba784dee": [
+  "testsuite-5d2f0a3a-b1d0-4896-97eb-e2ffba784dee": [
     {
       "buildId": 1,
-      "date": "2025-05-20",
-      "timestampe": "09:00:00",
-      "triggeredBy": "cron",
-      "duration": "37",
-      "results": {
-        "passed": 34,
-        "failed": 2,
-        "skipped": 1
-      },
-      "status": "Failed"
+      "skipped": 3,
+      "failed": 2,
+      "total": 12,
+      "passed": 7,
+      "suite": {
+        "name": "FullRegressionSuite",
+        "duration-ms": 32123,
+        "started-at": "2025-06-05T11:00:00Z",
+        "finished-at": "2025-06-05T11:00:32Z",
+        "test": [
+          {
+            "name": "LoginModule",
+            "duration-ms": 5000,
+            "started-at": "2025-06-05T11:00:00Z",
+            "finished-at": "2025-06-05T11:00:05Z",
+            "class": {
+              "name": "com.test.LoginTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "loginWithValidUser",
+                  "duration-ms": 1200,
+                  "started-at": "2025-06-05T11:00:00Z",
+                  "finished-at": "2025-06-05T11:00:01Z"
+                },
+                {
+                  "status": "FAIL",
+                  "name": "loginWithInvalidUser",
+                  "duration-ms": 1345,
+                  "started-at": "2025-06-05T11:00:01Z",
+                  "finished-at": "2025-06-05T11:00:03Z",
+                  "exception": {
+                    "class": "java.lang.AssertionError",
+                    "message": "Expected error message not shown",
+                    "full-stacktrace": "java.lang.AssertionError: Expected error message not shown\n\tat com.test.LoginTest.loginWithInvalidUser(LoginTest.java:45)\n\t..."
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "logoutTest",
+                  "duration-ms": 900,
+                  "started-at": "2025-06-05T11:00:03Z",
+                  "finished-at": "2025-06-05T11:00:04Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "loginWithLockedAccount",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-05T11:00:04Z",
+                  "finished-at": "2025-06-05T11:00:04Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Test skipped due to account lock"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "UserModule",
+            "duration-ms": 8000,
+            "started-at": "2025-06-05T11:00:05Z",
+            "finished-at": "2025-06-05T11:00:13Z",
+            "class": {
+              "name": "com.test.UserTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "createUser",
+                  "duration-ms": 2450,
+                  "started-at": "2025-06-05T11:00:05Z",
+                  "finished-at": "2025-06-05T11:00:07Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "updateUser",
+                  "duration-ms": 1780,
+                  "started-at": "2025-06-05T11:00:07Z",
+                  "finished-at": "2025-06-05T11:00:09Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "deleteUser",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-05T11:00:09Z",
+                  "finished-at": "2025-06-05T11:00:09Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "User deletion disabled in environment"
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "listUsers",
+                  "duration-ms": 1345,
+                  "started-at": "2025-06-05T11:00:09Z",
+                  "finished-at": "2025-06-05T11:00:10Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "SearchModule",
+            "duration-ms": 5500,
+            "started-at": "2025-06-05T11:00:13Z",
+            "finished-at": "2025-06-05T11:00:18Z",
+            "class": {
+              "name": "com.test.SearchTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "searchByKeyword",
+                  "duration-ms": 1200,
+                  "started-at": "2025-06-05T11:00:13Z",
+                  "finished-at": "2025-06-05T11:00:14Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "searchByCategory",
+                  "duration-ms": 1100,
+                  "started-at": "2025-06-05T11:00:14Z",
+                  "finished-at": "2025-06-05T11:00:15Z"
+                },
+                {
+                  "status": "FAIL",
+                  "name": "searchWithInvalidInput",
+                  "duration-ms": 1200,
+                  "started-at": "2025-06-05T11:00:15Z",
+                  "finished-at": "2025-06-05T11:00:16Z",
+                  "exception": {
+                    "class": "java.lang.NullPointerException",
+                    "message": "Null value encountered during search",
+                    "full-stacktrace": "java.lang.NullPointerException\n\tat com.test.SearchTest.searchWithInvalidInput(SearchTest.java:89)\n\t..."
+                  }
+                },
+                {
+                  "status": "SKIP",
+                  "name": "advancedSearchOptions",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-05T11:00:16Z",
+                  "finished-at": "2025-06-05T11:00:16Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Advanced search disabled in this release"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "buildId": 2,
-      "date": "2025-05-21",
-      "timestampe": "10:15:00",
-      "triggeredBy": "manual",
-      "duration": "42",
-      "results": {
-        "passed": 37,
-        "failed": 0,
-        "skipped": 0
-      },
-      "status": "Passed"
+      "skipped": 4,
+      "failed": 1,
+      "total": 10,
+      "passed": 5,
+      "suite": {
+        "name": "SmokeTestSuite",
+        "duration-ms": 28765,
+        "started-at": "2025-06-06T09:30:00Z",
+        "finished-at": "2025-06-06T09:30:28Z",
+        "test": [
+          {
+            "name": "PaymentModule",
+            "duration-ms": 9000,
+            "started-at": "2025-06-06T09:30:00Z",
+            "finished-at": "2025-06-06T09:30:09Z",
+            "class": {
+              "name": "com.test.PaymentTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "processCreditCard",
+                  "duration-ms": 2000,
+                  "started-at": "2025-06-06T09:30:00Z",
+                  "finished-at": "2025-06-06T09:30:02Z"
+                },
+                {
+                  "status": "FAIL",
+                  "name": "processInvalidCard",
+                  "duration-ms": 1800,
+                  "started-at": "2025-06-06T09:30:02Z",
+                  "finished-at": "2025-06-06T09:30:03Z",
+                  "exception": {
+                    "class": "java.lang.IllegalArgumentException",
+                    "message": "Invalid credit card number",
+                    "full-stacktrace": "java.lang.IllegalArgumentException: Invalid credit card number\n\tat com.test.PaymentTest.processInvalidCard(PaymentTest.java:37)\n\t..."
+                  }
+                },
+                {
+                  "status": "SKIP",
+                  "name": "refundTransaction",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-06T09:30:03Z",
+                  "finished-at": "2025-06-06T09:30:03Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Refunds are currently disabled for test environment"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "NotificationModule",
+            "duration-ms": 7000,
+            "started-at": "2025-06-06T09:30:09Z",
+            "finished-at": "2025-06-06T09:30:16Z",
+            "class": {
+              "name": "com.test.NotificationTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "sendEmailNotification",
+                  "duration-ms": 1700,
+                  "started-at": "2025-06-06T09:30:09Z",
+                  "finished-at": "2025-06-06T09:30:10Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "sendSMSNotification",
+                  "duration-ms": 1500,
+                  "started-at": "2025-06-06T09:30:10Z",
+                  "finished-at": "2025-06-06T09:30:11Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "sendPushNotification",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-06T09:30:11Z",
+                  "finished-at": "2025-06-06T09:30:11Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Push service not configured"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "DashboardModule",
+            "duration-ms": 8775,
+            "started-at": "2025-06-06T09:30:16Z",
+            "finished-at": "2025-06-06T09:30:24Z",
+            "class": {
+              "name": "com.test.DashboardTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "loadUserDashboard",
+                  "duration-ms": 2200,
+                  "started-at": "2025-06-06T09:30:16Z",
+                  "finished-at": "2025-06-06T09:30:18Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "loadAdminDashboard",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-06T09:30:18Z",
+                  "finished-at": "2025-06-06T09:30:18Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Admin dashboard disabled for current user role"
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "dashboardWidgetsVisibility",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T09:30:18Z",
+                  "finished-at": "2025-06-06T09:30:19Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "buildId": 3,
-      "date": "2025-05-22",
-      "timestampe": "11:00:00",
-      "triggeredBy": "cron",
-      "duration": "39",
-      "results": {
-        "passed": 35,
-        "failed": 1,
-        "skipped": 1
-      },
-      "status": "Failed"
+      "skipped": 2,
+      "failed": 3,
+      "total": 11,
+      "passed": 6,
+      "suite": {
+        "name": "RegressionCycleA",
+        "duration-ms": 31220,
+        "started-at": "2025-06-06T14:00:00Z",
+        "finished-at": "2025-06-06T14:00:31Z",
+        "test": [
+          {
+            "name": "ProfileModule",
+            "duration-ms": 10500,
+            "started-at": "2025-06-06T14:00:00Z",
+            "finished-at": "2025-06-06T14:00:10Z",
+            "class": {
+              "name": "com.test.ProfileTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "updateProfilePicture",
+                  "duration-ms": 1400,
+                  "started-at": "2025-06-06T14:00:00Z",
+                  "finished-at": "2025-06-06T14:00:01Z"
+                },
+                {
+                  "status": "FAIL",
+                  "name": "changePassword",
+                  "duration-ms": 1850,
+                  "started-at": "2025-06-06T14:00:01Z",
+                  "finished-at": "2025-06-06T14:00:02Z",
+                  "exception": {
+                    "class": "java.lang.AssertionError",
+                    "message": "Password policy not enforced",
+                    "full-stacktrace": "java.lang.AssertionError: Password policy not enforced\n\tat com.test.ProfileTest.changePassword(ProfileTest.java:102)\n\t..."
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "viewPublicProfile",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T14:00:02Z",
+                  "finished-at": "2025-06-06T14:00:03Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "deactivateAccount",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-06T14:00:03Z",
+                  "finished-at": "2025-06-06T14:00:03Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Feature not available for trial users"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "ReportsModule",
+            "duration-ms": 12200,
+            "started-at": "2025-06-06T14:00:10Z",
+            "finished-at": "2025-06-06T14:00:22Z",
+            "class": {
+              "name": "com.test.ReportTest",
+              "test-method": [
+                {
+                  "status": "FAIL",
+                  "name": "generateMonthlyReport",
+                  "duration-ms": 2700,
+                  "started-at": "2025-06-06T14:00:10Z",
+                  "finished-at": "2025-06-06T14:00:12Z",
+                  "exception": {
+                    "class": "java.lang.RuntimeException",
+                    "message": "Timeout while querying database",
+                    "full-stacktrace": "java.lang.RuntimeException: Timeout while querying database\n\tat com.test.ReportTest.generateMonthlyReport(ReportTest.java:67)\n\t..."
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "generateDailyReport",
+                  "duration-ms": 1800,
+                  "started-at": "2025-06-06T14:00:12Z",
+                  "finished-at": "2025-06-06T14:00:14Z"
+                },
+                {
+                  "status": "FAIL",
+                  "name": "reportExportToCSV",
+                  "duration-ms": 1600,
+                  "started-at": "2025-06-06T14:00:14Z",
+                  "finished-at": "2025-06-06T14:00:15Z",
+                  "exception": {
+                    "class": "java.io.IOException",
+                    "message": "File write permission denied",
+                    "full-stacktrace": "java.io.IOException: File write permission denied\n\tat com.test.ReportTest.reportExportToCSV(ReportTest.java:89)\n\t..."
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "applyReportFilters",
+                  "duration-ms": 1100,
+                  "started-at": "2025-06-06T14:00:15Z",
+                  "finished-at": "2025-06-06T14:00:16Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "FeedbackModule",
+            "duration-ms": 8500,
+            "started-at": "2025-06-06T14:00:22Z",
+            "finished-at": "2025-06-06T14:00:30Z",
+            "class": {
+              "name": "com.test.FeedbackTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "submitFeedback",
+                  "duration-ms": 1450,
+                  "started-at": "2025-06-06T14:00:22Z",
+                  "finished-at": "2025-06-06T14:00:23Z"
+                },
+                {
+                  "status": "SKIP",
+                  "name": "viewFeedbackStats",
+                  "duration-ms": 0,
+                  "started-at": "2025-06-06T14:00:23Z",
+                  "finished-at": "2025-06-06T14:00:23Z",
+                  "exception": {
+                    "class": "org.testng.SkipException",
+                    "message": "Stats service under maintenance"
+                  }
+                },
+                {
+                  "status": "PASS",
+                  "name": "filterFeedbackByRating",
+                  "duration-ms": 1600,
+                  "started-at": "2025-06-06T14:00:23Z",
+                  "finished-at": "2025-06-06T14:00:25Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "buildId": 4,
-      "date": "2025-05-23",
-      "timestampe": "08:30:00",
-      "triggeredBy": "manual",
-      "duration": "40",
-      "results": {
-        "passed": 36,
-        "failed": 0,
-        "skipped": 1
-      },
-      "status": "Passed"
+      "skipped": 0,
+      "failed": 0,
+      "total": 9,
+      "passed": 9,
+      "suite": {
+        "name": "SanitySuite",
+        "duration-ms": 26780,
+        "started-at": "2025-06-06T15:00:00Z",
+        "finished-at": "2025-06-06T15:00:26Z",
+        "test": [
+          {
+            "name": "AuthModule",
+            "duration-ms": 7000,
+            "started-at": "2025-06-06T15:00:00Z",
+            "finished-at": "2025-06-06T15:00:07Z",
+            "class": {
+              "name": "com.test.AuthTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "validLogin",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T15:00:00Z",
+                  "finished-at": "2025-06-06T15:00:01Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "logoutFunctionality",
+                  "duration-ms": 1100,
+                  "started-at": "2025-06-06T15:00:01Z",
+                  "finished-at": "2025-06-06T15:00:02Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "sessionTimeout",
+                  "duration-ms": 1500,
+                  "started-at": "2025-06-06T15:00:02Z",
+                  "finished-at": "2025-06-06T15:00:04Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "ProductModule",
+            "duration-ms": 9500,
+            "started-at": "2025-06-06T15:00:07Z",
+            "finished-at": "2025-06-06T15:00:16Z",
+            "class": {
+              "name": "com.test.ProductTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "addProduct",
+                  "duration-ms": 1800,
+                  "started-at": "2025-06-06T15:00:07Z",
+                  "finished-at": "2025-06-06T15:00:09Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "editProduct",
+                  "duration-ms": 1700,
+                  "started-at": "2025-06-06T15:00:09Z",
+                  "finished-at": "2025-06-06T15:00:10Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "deleteProduct",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T15:00:10Z",
+                  "finished-at": "2025-06-06T15:00:11Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "SettingsModule",
+            "duration-ms": 10280,
+            "started-at": "2025-06-06T15:00:16Z",
+            "finished-at": "2025-06-06T15:00:26Z",
+            "class": {
+              "name": "com.test.SettingsTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "updateUserPreferences",
+                  "duration-ms": 2000,
+                  "started-at": "2025-06-06T15:00:16Z",
+                  "finished-at": "2025-06-06T15:00:18Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "changeLanguage",
+                  "duration-ms": 1600,
+                  "started-at": "2025-06-06T15:00:18Z",
+                  "finished-at": "2025-06-06T15:00:20Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "toggleNotifications",
+                  "duration-ms": 1200,
+                  "started-at": "2025-06-06T15:00:20Z",
+                  "finished-at": "2025-06-06T15:00:21Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "buildId": 5,
-      "date": "2025-05-24",
-      "timestampe": "07:45:00",
-      "triggeredBy": "cron",
-      "duration": "38",
-      "results": {
-        "passed": 30,
-        "failed": 5,
-        "skipped": 2
-      },
-      "status": "Failed"
-    },
-    {
-      "buildId": 6,
-      "date": "2025-05-25",
-      "timestampe": "06:50:00",
-      "triggeredBy": "api",
-      "duration": "36",
-      "results": {
-        "passed": 37,
-        "failed": 0,
-        "skipped": 0
-      },
-      "status": "Passed"
+      "skipped": 0,
+      "failed": 0,
+      "total": 10,
+      "passed": 10,
+      "suite": {
+        "name": "SmokeTestsSuite",
+        "duration-ms": 30150,
+        "started-at": "2025-06-06T16:30:00Z",
+        "finished-at": "2025-06-06T16:30:30Z",
+        "test": [
+          {
+            "name": "DashboardModule",
+            "duration-ms": 9800,
+            "started-at": "2025-06-06T16:30:00Z",
+            "finished-at": "2025-06-06T16:30:10Z",
+            "class": {
+              "name": "com.test.DashboardTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "loadDashboardWidgets",
+                  "duration-ms": 1500,
+                  "started-at": "2025-06-06T16:30:00Z",
+                  "finished-at": "2025-06-06T16:30:01Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "refreshStats",
+                  "duration-ms": 1200,
+                  "started-at": "2025-06-06T16:30:01Z",
+                  "finished-at": "2025-06-06T16:30:02Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "navigateToReports",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T16:30:02Z",
+                  "finished-at": "2025-06-06T16:30:03Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "NotificationsModule",
+            "duration-ms": 9000,
+            "started-at": "2025-06-06T16:30:10Z",
+            "finished-at": "2025-06-06T16:30:19Z",
+            "class": {
+              "name": "com.test.NotificationTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "sendEmailNotification",
+                  "duration-ms": 1700,
+                  "started-at": "2025-06-06T16:30:10Z",
+                  "finished-at": "2025-06-06T16:30:11Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "markAllAsRead",
+                  "duration-ms": 1400,
+                  "started-at": "2025-06-06T16:30:11Z",
+                  "finished-at": "2025-06-06T16:30:12Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "unsubscribeFromTopic",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T16:30:12Z",
+                  "finished-at": "2025-06-06T16:30:13Z"
+                }
+              ]
+            }
+          },
+          {
+            "name": "HelpCenterModule",
+            "duration-ms": 11350,
+            "started-at": "2025-06-06T16:30:19Z",
+            "finished-at": "2025-06-06T16:30:30Z",
+            "class": {
+              "name": "com.test.HelpCenterTest",
+              "test-method": [
+                {
+                  "status": "PASS",
+                  "name": "searchHelpArticles",
+                  "duration-ms": 1800,
+                  "started-at": "2025-06-06T16:30:19Z",
+                  "finished-at": "2025-06-06T16:30:21Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "openContactSupportForm",
+                  "duration-ms": 1500,
+                  "started-at": "2025-06-06T16:30:21Z",
+                  "finished-at": "2025-06-06T16:30:22Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "submitTicket",
+                  "duration-ms": 1450,
+                  "started-at": "2025-06-06T16:30:22Z",
+                  "finished-at": "2025-06-06T16:30:23Z"
+                },
+                {
+                  "status": "PASS",
+                  "name": "viewTicketStatus",
+                  "duration-ms": 1300,
+                  "started-at": "2025-06-06T16:30:23Z",
+                  "finished-at": "2025-06-06T16:30:24Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   ]
 }
