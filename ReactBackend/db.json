@@ -1741,13 +1741,15 @@
   ],
   "testsuite-5d2f0a3a-b1d0-4896-97eb-e2ffba784dee": [
     {
+      "name":"user-taf-smoke",
+      "status": "PASS",
       "buildId": 1,
       "skipped": 3,
       "failed": 2,
       "total": 12,
       "passed": 7,
       "suite": {
-        "name": "FullRegressionSuite",
+        "name": "user-taf-smoke",
         "duration-ms": 32123,
         "started-at": "2025-06-05T11:00:00Z",
         "finished-at": "2025-06-05T11:00:32Z",
@@ -1895,13 +1897,14 @@
       }
     },
     {
+      "name":"user-taf-smoke",
       "buildId": 2,
       "skipped": 4,
       "failed": 1,
       "total": 10,
       "passed": 5,
       "suite": {
-        "name": "SmokeTestSuite",
+        "name": "user-taf-smoke",
         "duration-ms": 28765,
         "started-at": "2025-06-06T09:30:00Z",
         "finished-at": "2025-06-06T09:30:28Z",
@@ -2023,13 +2026,14 @@
       }
     },
     {
+      "name":"user-taf-smoke",
       "buildId": 3,
       "skipped": 2,
       "failed": 3,
       "total": 11,
       "passed": 6,
       "suite": {
-        "name": "RegressionCycleA",
+        "name": "user-taf-smoke",
         "duration-ms": 31220,
         "started-at": "2025-06-06T14:00:00Z",
         "finished-at": "2025-06-06T14:00:31Z",
@@ -2171,13 +2175,14 @@
       }
     },
     {
+      "name":"user-taf-smoke",
       "buildId": 4,
       "skipped": 0,
       "failed": 0,
       "total": 9,
       "passed": 9,
       "suite": {
-        "name": "SanitySuite",
+        "name": "user-taf-smoke",
         "duration-ms": 26780,
         "started-at": "2025-06-06T15:00:00Z",
         "finished-at": "2025-06-06T15:00:26Z",
@@ -2282,13 +2287,14 @@
       }
     },
     {
+      "name":"user-taf-smoke",
       "buildId": 5,
       "skipped": 0,
       "failed": 0,
       "total": 10,
       "passed": 10,
       "suite": {
-        "name": "SmokeTestsSuite",
+        "name": "user-taf-smoke",
         "duration-ms": 30150,
         "started-at": "2025-06-06T16:30:00Z",
         "finished-at": "2025-06-06T16:30:30Z",
